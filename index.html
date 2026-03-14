@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nihal Savaliya — First Year CSE-IoT Student, Web Developer, and C/C++ Programmer.">
+    <title>Nihal Savaliya | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>NS<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span>
+                Available for collaboration
+            </div>
+            <h1 class="hero-title animate-on-scroll">
+                Hi, I'm <span class="gradient-text">Nihal Savaliya</span>
+            </h1>
+            <p class="hero-subtitle animate-on-scroll">
+                <span id="typingText"></span><span class="typing-cursor">|</span>
+            </p>
+            <p class="hero-description animate-on-scroll">
+                First Year CSE-IoT student passionate about building elegant digital experiences 
+                and solving problems with code.
+            </p>
+            <div class="hero-buttons animate-on-scroll">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1">0</span>
+                    <span class="stat-label">Year Learning</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Getting to know who I am</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p>
+                        I'm <strong>Nihal Savaliya</strong>, a first-year Computer Science and Engineering (IoT) student 
+                        with a deep curiosity for technology and how it shapes the world around us. My journey into 
+                        programming started with the fundamentals of C and C++, and has since expanded into the 
+                        creative realm of web development with HTML and CSS.
+                    </p>
+                    <p>
+                        I believe in learning by building. Whether it's collaborating with a team of four on an 
+                        enterprise-level HRMS system or crafting a clean, functional business website, I thrive on 
+                        turning ideas into real, working products. I'm constantly exploring new technologies and 
+                        looking for opportunities to grow as a developer.
+                    </p>
+                    <div class="about-info-cards">
+                        <div class="info-card">
+                            <div class="info-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Education</h4>
+                                <p>B.Tech CSE-IoT · First Year</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Focus</h4>
+                                <p>Web Development · Systems Programming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual animate-on-scroll">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">nihal.js</span>
+                        </div>
+                        <div class="code-body">
+                            <pre><code><span class="code-keyword">const</span> <span class="code-var">nihal</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Nihal Savaliya"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"CSE-IoT Student"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"HTML/CSS"</span>,
+    <span class="code-string">"C/C++"</span>,
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building things"</span>,
+  <span class="code-prop">motto</span>: <span class="code-string">"Learn by doing"</span>,
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <!-- HTML/CSS -->
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                            <line x1="14" y1="4" x2="10" y2="20" stroke-dasharray="2 2"></line>
+                        </svg>
+                    </div>
+                    <h3>HTML / CSS</h3>
+                    <p>Building semantic, accessible, and beautifully styled web pages with modern CSS techniques.</p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="75"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">Flexbox / Grid</span>
+                        <span class="tag">Animations</span>
+                    </div>
+                </div>
+
+                <!-- C/C++ -->
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6 3v18"></path>
+                            <path d="M6 3h8a5 5 0 0 1 0 7H6"></path>
+                            <path d="M6 14h9a5 5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>C / C++</h3>
+                    <p>Strong foundations in data structures, algorithms, and systems-level programming concepts.</p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="65"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Data Structures</span>
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">OOP</span>
+                    </div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>Problem Solving</h3>
+                    <p>Analytical thinking applied to debugging, optimization, and finding elegant solutions.</p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="70"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Logic</span>
+                        <span class="tag">Debugging</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Things I've built and collaborated on</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: HRMS -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <span class="project-badge">Team Project</span>
+                        </div>
+                        <h3 class="project-title">HRMS System</h3>
+                        <p class="project-description">
+                            A comprehensive Human Resource Management System built collaboratively with a team 
+                            of 4 developers. Features include employee management, attendance tracking, and 
+                            streamlined HR workflows.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Team of 4</span>
+                            <span class="tech-tag">Full-Stack</span>
+                            <span class="tech-tag">HRMS</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link-info">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                Team Project
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-shine"></div>
+                </div>
+
+                <!-- Project 2: DHS Group -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </div>
+                            <span class="project-badge live">Live</span>
+                        </div>
+                        <h3 class="project-title">DHS Group Website</h3>
+                        <p class="project-description">
+                            A professional business website designed and developed for DHS Group. 
+                            Clean, responsive design showcasing the company's services and brand 
+                            identity. Currently live and in production.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Web Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nihal-savaliya.github.io/DHS-group-site/home_page.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Site
+                            </a>
+                            <a href="https://github.com/nihal-savaliya/DHS-group-site" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-shine"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Let's connect and build something amazing together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <p class="contact-intro">
+                        I'm always open to new opportunities, collaborations, and conversations. 
+                        Whether you have a project idea or just want to say hi — feel free to reach out!
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:nihalsavaliya25@gmail.com" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>nihalsavaliya25@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:+919537969888" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 9537969888</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/nihal-savaliya" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>nihal-savaliya</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nihal-savaliya" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>nihal-savaliya</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>NS<span class="logo-bracket">/&gt;</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Nihal Savaliya. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
