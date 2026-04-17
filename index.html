@@ -95,12 +95,12 @@
             </div>
             <div class="hero-stats animate-on-scroll">
                 <div class="stat">
-                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-number" data-count="3">0</span>
                     <span class="stat-label">Projects</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-number" data-count="5">0</span>
                     <span class="stat-label">Technologies</span>
                 </div>
                 <div class="stat-divider"></div>
@@ -130,15 +130,10 @@
                 <div class="about-text animate-on-scroll">
                     <p>
                         I'm <strong>Nihal Savaliya</strong>, a first-year Computer Science and Engineering (IoT) student
-                        with a deep curiosity for technology and how it shapes the world around us. My journey into
-                        programming started with the fundamentals of C and C++, and has since expanded into the
-                        creative realm of web development with HTML and CSS.
+                        driven by a passion for solving complex real-world problems through elegant engineering. I focus on bridging the gap between innovative ideas and immersive user experiences, turning abstract concepts into scalable digital solutions.
                     </p>
                     <p>
-                        I believe in learning by building. Whether it's collaborating with a team of four on an
-                        enterprise-level HRMS system or crafting a clean, functional business website, I thrive on
-                        turning ideas into real, working products. I'm constantly exploring new technologies and
-                        looking for opportunities to grow as a developer.
+                        I believe in learning by building. Whether it's architecting intelligent platforms, integrating dynamic AI tools, or collaborating on enterprise-level architectures, I thrive in environments that challenge me to craft polished, impactful products. I'm constantly seeking out new challenges to push the boundaries of what I can create.
                     </p>
                     <div class="about-info-cards">
                         <div class="info-card">
@@ -164,7 +159,7 @@
                             </div>
                             <div>
                                 <h4>Focus</h4>
-                                <p>Web Development · Systems Programming</p>
+                                <p>Software Engineering · AI Architecture</p>
                             </div>
                         </div>
                     </div>
@@ -183,9 +178,9 @@
                             <pre><code><span class="code-keyword">const</span> <span class="code-var">nihal</span> = {
   <span class="code-prop">name</span>: <span class="code-string">"Nihal Savaliya"</span>,
   <span class="code-prop">role</span>: <span class="code-string">"CSE-IoT Student"</span>,
-  <span class="code-prop">skills</span>: [
-    <span class="code-string">"HTML/CSS"</span>,
-    <span class="code-string">"C/C++"</span>,
+  <span class="code-prop">domains</span>: [
+    <span class="code-string">"Software Engineering"</span>,
+    <span class="code-string">"AI Integrations"</span>,
   ],
   <span class="code-prop">passion</span>: <span class="code-string">"Building things"</span>,
   <span class="code-prop">motto</span>: <span class="code-string">"Learn by doing"</span>,
@@ -274,6 +269,52 @@
                         <span class="tag">Optimization</span>
                     </div>
                 </div>
+
+                <!-- JavaScript -->
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <path d="M10 13l-2 2 2 2"></path>
+                            <path d="M14 17l2-2-2-2"></path>
+                        </svg>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Creating interactive, dynamic web applications with modern ES6+ features and asynchronous programming.</p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="80"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">ES6+</span>
+                        <span class="tag">DOM Manipulation</span>
+                        <span class="tag">Async/Await</span>
+                    </div>
+                </div>
+
+                <!-- Backend & APIs -->
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3>Backend & APIs</h3>
+                    <p>Building secure server-side applications, RESTful APIs, and integrating third-party AI services.</p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="70"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">JWT & Auth</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -287,7 +328,48 @@
                 <p class="section-subtitle">Things I've built and collaborated on</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1: HRMS -->
+                <!-- Project 1: Finance Buddy -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <span class="project-badge live">Live</span>
+                        </div>
+                        <h3 class="project-title">Finance Buddy</h3>
+                        <p class="project-description">
+                            A premium fintech application powered by AI. Features secure JWT authentication, multi-user dashboards, goal tracking, and an AI chatbot (Gemini/Groq) with smart SMS parsing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Full-Stack</span>
+                            <span class="tech-tag">AI Integration</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://finance-buddy-mkoo.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live App
+                            </a>
+                            <a href="https://github.com/nihal-savaliya/finance-buddy" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-shine"></div>
+                </div>
+
+                <!-- Project 2: HRMS -->
                 <div class="project-card animate-on-scroll">
                     <div class="project-card-inner">
                         <div class="project-header">
@@ -329,7 +411,7 @@
                     <div class="project-shine"></div>
                 </div>
 
-                <!-- Project 2: DHS Group -->
+                <!-- Project 3: DHS Group -->
                 <div class="project-card animate-on-scroll">
                     <div class="project-card-inner">
                         <div class="project-header">
