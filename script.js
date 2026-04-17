@@ -170,8 +170,8 @@
     const typingEl = document.getElementById('typingText');
     const phrases = [
         'CSE-IoT Student',
-        'Web Developer',
-        'C/C++ Programmer',
+        'Software Engineer',
+        'AI Innovator',
         'Tech Enthusiast',
         'Problem Solver'
     ];
